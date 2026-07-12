@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  IDINTELIGENTES — Landing Page
+  Distribuidor oficial Cykeo RFID en Argentina
+  Productos: CK-GY1B (Medical RFID Cabinet) + CK-GY1A (Smart RFID Medical Cabinet)
+  ----------------------------------------------------------------------------
+  Diseño: Sistema Apple (referencia principal) + acentos amp (referencia secundaria)
+  Stack: HTML5 semántico + CSS puro + JavaScript vanilla (sin dependencias)
+  Accesibilidad: WCAG 2.1 AA — nav por teclado, ARIA, prefers-reduced-motion
+  ============================================================================
+-->
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1d1d1f" />
+
+  <!-- SEO -->
+  <title>IDInteligentes — Gabinetes RFID Médicos Cykeo en Argentina</title>
+  <meta name="description" content="Gabinetes RFID médicos Cykeo distribuidos en Argentina. Trazabilidad de insumos quirúrgicos, cumplimiento normativo y control de stock en tiempo real. CK-GY1B y CK-GY1A." />
+  <meta name="keywords" content="RFID médico, gabinete RFID, trazabilidad hospitalaria, Cykeo Argentina, control de stock hospitalario" />
+  <meta name="author" content="IDInteligentes" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IDInteligentes — Gabinetes RFID Médicos Cykeo en Argentina" />
+  <meta property="og:description" content="Trazabilidad de insumos quirúrgicos con tecnología RFID. Distribución oficial Cykeo en Argentina." />
+  <meta property="og:locale" content="es_AR" />
+
+  <!-- Favicon SVG (logo oficial) -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo-mark.svg" />
+
+  <!-- Tipografía: Inter como sustituto óptimo de SF Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- =========================================================================
+       ANUNCIO SUPERIOR — Barra fina con mensaje local (patrón amp announcement bar)
+       ========================================================================= -->
+  <div class="announce" role="banner">
+    <p>Distribución oficial Cykeo RFID en Argentina · Stock disponible · <a href="#contacto">Solicitar demo</a></p>
+  </div>
+
+  <!-- =========================================================================
+       SECCIÓN 1 — NAVEGACIÓN GLOBAL (patrón Apple Global Nav Bar)
+       Sticky, fondo blanco, hairline border inferior.
+       ========================================================================= -->
+  <header class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav__inner">
+      <!-- Logo / Marca distribuidora -->
+      <a href="#top" class="nav__logo" aria-label="IDInteligentes — Inicio">
+        <img src="assets/logo-mark.svg" alt="" class="nav__logo-img" width="28" height="28" />
+        <span class="nav__logo-text">IDInteligentes</span>
+      </a>
+
+      <!-- Links de navegación -->
+      <nav class="nav__links" aria-label="Secciones">
+        <a href="#productos">Productos</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#especificaciones">Especificaciones</a>
+        <a href="#aplicaciones">Aplicaciones</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+
+      <!-- CTA persistente nav (patrón amp "Nav Buy Now") -->
+      <a href="#contacto" class="btn btn--primary btn--sm nav__cta">Hablar con un asesor</a>
+
+      <!-- Botón menú móvil -->
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <div class="nav__mobile" id="mobileMenu" hidden>
+      <a href="#productos">Productos</a>
+      <a href="#caracteristicas">Características</a>
+      <a href="#especificaciones">Especificaciones</a>
+      <a href="#aplicaciones">Aplicaciones</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#contacto" class="btn btn--primary btn--sm">Hablar con un asesor</a>
+    </div>
+  </header>
+
+  <!-- Skip link accesible -->
+  <a href="#hero" class="skip-link">Saltar al contenido</a>
+
+  <main id="top">
+    <!-- =======================================================================
+         SECCIÓN 2 — HERO (patrón Apple Product Hero Section)
+         Full-bleed fondo Frost, headline centrado, dos CTAs, render producto.
+         Presenta ambos modelos equilibrados.
+         ======================================================================= -->
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="hero__inner">
+        <p class="hero__eyebrow" data-reveal>Gabinetes RFID Médicos</p>
+        <h1 class="hero__title" id="heroTitle" data-reveal>
+          Control total de insumos críticos.
+        </h1>
+        <p class="hero__tagline" data-reveal>
+          Trazabilidad en tiempo real para quirófanos, farmacias y laboratorios.
+          Distribución oficial <strong>Cykeo</strong> en Argentina.
+        </p>
+
+        <!-- CTAs emparejados (regla Apple: filled + outlined, nunca dos filled) -->
+        <div class="hero__actions" data-reveal>
+          <a href="#productos" class="btn btn--primary">Ver los modelos</a>
+          <a href="#contacto" class="btn btn--outlined">Solicitar demo</a>
+        </div>
+
+        <!-- Render de productos: ambos modelos lado a lado -->
+        <div class="hero__products" data-reveal>
+          <figure class="hero__product">
+            <img src="assets/products/gy1b/hero-banner.png"
+                 alt="Gabinete RFID médico Cykeo CK-GY1B con pantalla táctil de 21.5 pulgadas y doble puerta"
+                 loading="eager" fetchpriority="high" width="560" height="600" />
+            <figcaption>CK-GY1B · 21.5″ · 400 unidades</figcaption>
+          </figure>
+          <figure class="hero__product hero__product--compact">
+            <img src="assets/products/gy1a/hero-banner.png"
+                 alt="Gabinete RFID médico inteligente Cykeo CK-GY1A con pantalla de 14 pulgadas"
+                 loading="eager" width="420" height="600" />
+            <figcaption>CK-GY1A · 14″ · 200 unidades</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Indicador de scroll -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 3 — PRUEBA SOCIAL / LOGOS (patrón amp Press Logo Strip)
+         Banda fina con logros normativos — reemplaza logos de prensa con
+         certificaciones que importan al comprador hospitalario argentino.
+         ======================================================================= -->
+    <section class="proof" aria-label="Certificaciones y normas">
+      <div class="proof__inner">
+        <p class="proof__label" data-reveal>Cumplimiento normativo</p>
+        <ul class="proof__logos" data-reveal>
+          <li>FDA 21 CFR Part 11</li>
+          <li>ISO 18000-6C</li>
+          <li>HIPAA</li>
+          <li>CE Médico</li>
+          <li>GMP</li>
+          <li>IP54</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 4 — DESCRIPCIÓN EDITORIAL (patrón amp Editorial Section Heading)
+         Eyebrow + párrafo introductorio del producto. Acento azul bajo título.
+         ======================================================================= -->
+    <section class="intro" aria-labelledby="introTitle">
+      <div class="intro__inner">
+        <p class="intro__eyebrow" data-reveal>TRACE CADA ITEM, CONFÍE EN CADA ESCANEO</p>
+        <h2 class="intro__title" id="introTitle" data-reveal>
+          La trazabilidad deja de ser un problema.
+        </h2>
+        <!-- Accent rule amp: regla azul bajo título a ~1/3 del ancho -->
+        <span class="intro__rule" data-reveal aria-hidden="true"></span>
+        <p class="intro__body" data-reveal>
+          Los gabinetes Cykeo mantienen los insumos quirúrgicos, implantes y
+          consumibles de alto valor bajo control permanente. La tecnología
+          <abbr title="Radio Frequency Identification">RFID</abbr> UHF escanea el
+          contenido completo en segundos, el inventario es visible al instante y
+          el acceso se libera por huella, tarjeta o reconocimiento facial. Chasis
+          de acero pensado para quirófanos, farmacias y depósitos de ensayos
+          clínicos. Conectividad WiFi y 4G que mantiene las alertas activas:
+          siempre se sabe qué entra y qué sale. Sin faltantes, sin pérdidas,
+          control directo.
+        </p>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 5 — PRODUCTOS (comparación GY1B vs GY1A lado a lado)
+         Dos tarjetas equilibradas, cada una con su galería de imágenes.
+         ======================================================================= -->
+    <section class="products" id="productos" aria-labelledby="productsTitle">
+      <div class="products__inner">
+        <header class="section-head" data-reveal>
+          <p class="section-head__eyebrow">Dos modelos, una plataforma</p>
+          <h2 class="section-head__title" id="productsTitle">Elija el gabinete para su institución</h2>
+          <span class="section-head__rule" aria-hidden="true"></span>
+          <p class="section-head__sub">
+            Misma ingeniería Cykeo, dos formatos. El modelo grande para alto
+            volumen; el compacto para espacios reducidos.
+          </p>
+        </header>
+
+        <div class="products__grid">
+          <!-- ====== PRODUCTO 1: CK-GY1B ====== -->
+          <article class="product" data-reveal>
+            <div class="product__media">
+              <!-- Imagen principal intercambiable vía JS -->
+              <img class="product__main"
+                   id="gy1bMain"
+                   src="assets/products/gy1b/gallery-1-main.jpg"
+                   alt="Gabinete RFID Cykeo CK-GY1B visto de frente con pantalla táctil encendida"
+                   loading="lazy" width="600" height="600" />
+              <!-- Thumbnails -->
+              <div class="product__thumbs" role="tablist" aria-label="Galería CK-GY1B">
+                <button class="product__thumb is-active" role="tab" aria-selected="true"
+                        data-target="gy1bMain" data-src="assets/products/gy1b/gallery-1-main.jpg"
+                        aria-label="Vista principal">
+                  <img src="assets/products/gy1b/gallery-1-main.jpg" alt="" loading="lazy" />
+                </button>
+                <button class="product__thumb" role="tab" aria-selected="false"
+                        data-target="gy1bMain" data-src="assets/products/gy1b/gallery-2-full.jpg"
+                        aria-label="Vista lateral">
+                  <img src="assets/products/gy1b/gallery-2-full.jpg" alt="" loading="lazy" />
+                </button>
+                <button class="product__thumb" role="tab" aria-selected="false"
+                        data-target="gy1bMain" data-src="assets/products/gy1b/gallery-3-full.jpg"
+                        aria-label="Vista interior">
+                  <img src="assets/products/gy1b/gallery-3-full.jpg" alt="" loading="lazy" />
+                </button>
+                <button class="product__thumb" role="tab" aria-selected="false"
+                        data-target="gy1bMain" data-src="assets/products/gy1b/gallery-4-full.jpg"
+                        aria-label="Detalle pantalla">
+                  <img src="assets/products/gy1b/gallery-4-full.jpg" alt="" loading="lazy" />
+                </button>
+                <button class="product__thumb" role="tab" aria-selected="false"
+                        data-target="gy1bMain" data-src="assets/products/gy1b/gallery-5-full.jpg"
+                        aria-label="Vista instalada">
+                  <img src="assets/products/gy1b/gallery-5-full.jpg" alt="" loading="lazy" />
+                </button>
+              </div>
+            </div>
+
+            <div class="product__body">
+              <p class="product__code">CYKEO-GY1B</p>
+              <h3 class="product__name">Medical RFID Cabinet</h3>
+              <p class="product__tag">Almacenamiento con pantalla táctil para activos médicos críticos</p>
+
+              <ul class="product__bullets">
+                <li><span aria-hidden="true">✔</span> Pantalla táctil HD de 21.5″ (Windows / Android)</li>
+                <li><span aria-hidden="true">✔</span> Capacidad de 400 unidades</li>
+                <li><span aria-hidden="true">✔</span> Acceso por RFID, huella o rostro</li>
+                <li><span aria-hidden="true">✔</span> Cumplimiento HIPAA / GMP</li>
+              </ul>
+
+              <div class="product__meta">
+                <div><strong>1.000</strong><span>tags/min</span></div>
+                <div><strong>≤5s</strong><span>escaneo</span></div>
+                <div><strong>300W</strong><span>+ UPS 8h</span></div>
+              </div>
+
+              <div class="product__actions">
+                <a href="#contacto" class="btn btn--primary btn--sm" data-product="GY1B">Solicitar presupuesto</a>
+                <a href="#especificaciones" class="btn btn--ghost btn--sm">Ver ficha técnica</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ====== PRODUCTO 2: CK-GY1A ====== -->
+          <article class="product product--alt" data-reveal>
+            <div class="product__media">
+              <img class="product__main"
+                   id="gy1aMain"
+                   src="assets/products/gy1a/gallery-1-main.jpg"
+                   alt="Gabinete RFID inteligente Cykeo CK-GY1A con pantalla de 14 pulgadas"
+                   loading="lazy" width="600" height="600" />
+              <div class="product__thumbs" role="tablist" aria-label="Galería CK-GY1A">
+                <button class="product__thumb is-active" role="tab" aria-selected="true"
+                        data-target="gy1aMain" data-src="assets/products/gy1a/gallery-1-main.jpg"
+                        aria-label="Vista principal">
+                  <img src="assets/products/gy1a/gallery-1-main.jpg" alt="" loading="lazy" />
+                </button>
+                <button class="product__thumb" role="tab" aria-selected="false"
+                        data-target="gy1aMain" data-src="assets/products/gy1a/gallery-2-full.jpg"
+                        aria-label="Vista lateral">
+                  <img src="assets/products/gy1a/gallery-2-full.jpg" alt="" loading="lazy" />
+                </button>
+                <button class="product__thumb" role="tab" aria-selected="false"
+                        data-target="gy1aMain" data-src="assets/products/gy1a/gallery-3-full.jpg"
+                        aria-label="Vista interior">
+                  <img src="assets/products/gy1a/gallery-3-full.jpg" alt="" loading="lazy" />
+                </button>
+                <button class="product__thumb" role="tab" aria-selected="false"
+                        data-target="gy1aMain" data-src="assets/products/gy1a/gallery-4-full.jpg"
+                        aria-label="Detalle pantalla">
+                  <img src="assets/products/gy1a/gallery-4-full.jpg" alt="" loading="lazy" />
+                </button>
+                <button class="product__thumb" role="tab" aria-selected="false"
+                        data-target="gy1aMain" data-src="assets/products/gy1a/gallery-5-full.jpg"
+                        aria-label="Vista instalada">
+                  <img src="assets/products/gy1a/gallery-5-full.jpg" alt="" loading="lazy" />
+                </button>
+              </div>
+            </div>
+
+            <div class="product__body">
+              <p class="product__code">CYKEO-GY1A</p>
+              <h3 class="product__name">Smart RFID Medical Cabinet</h3>
+              <p class="product__tag">Gestión de consumibles quirúrgicos en tiempo real con precisión IoT</p>
+
+              <ul class="product__bullets">
+                <li><span aria-hidden="true">✔</span> Pantalla táctil de 14″ con doble cámara 1080p</li>
+                <li><span aria-hidden="true">✔</span> Capacidad de 200 unidades</li>
+                <li><span aria-hidden="true">✔</span> Cumplimiento FDA 21 CFR Part 11 + CE Médico</li>
+                <li><span aria-hidden="true">✔</span> 99% de precisión de inventario</li>
+              </ul>
+
+              <div class="product__meta">
+                <div><strong>500</strong><span>tags buffer</span></div>
+                <div><strong>≤5s</strong><span>escaneo</span></div>
+                <div><strong>−70%</strong><span>trabajo manual</span></div>
+              </div>
+
+              <div class="product__actions">
+                <a href="#contacto" class="btn btn--primary btn--sm" data-product="GY1A">Solicitar presupuesto</a>
+                <a href="#especificaciones" class="btn btn--ghost btn--sm">Ver ficha técnica</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 6 — ESCENARIOS DE APLICACIÓN (chips del sitio original)
+         6 chips horizontales con los entornos objetivo.
+         ======================================================================= -->
+    <section class="scenarios" aria-labelledby="scenariosTitle">
+      <div class="scenarios__inner">
+        <h2 class="scenarios__title" id="scenariosTitle" data-reveal>Diseñado para cada entorno crítico</h2>
+        <ul class="scenarios__chips" data-reveal>
+          <li>Centro quirúrgico</li>
+          <li>Instrumental de quirófano</li>
+          <li>Sala limpia farmacéutica</li>
+          <li>Farmacia y anestesia</li>
+          <li>Gestión hospitalaria</li>
+          <li>Laboratorio biológico</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 7 — CARACTERÍSTICAS (patrón amp Ghost Card en grid)
+         8 tarjetas con icono + título + descripción. Combinamos features de
+         ambos modelos en una grilla unificada.
+         ======================================================================= -->
+    <section class="features" id="caracteristicas" aria-labelledby="featuresTitle">
+      <div class="features__inner">
+        <header class="section-head" data-reveal>
+          <p class="section-head__eyebrow">Características clave</p>
+          <h2 class="section-head__title" id="featuresTitle">Tecnología que trabaja por la institución</h2>
+          <span class="section-head__rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="features__grid">
+          <!-- Feature 1 -->
+          <article class="feature" data-reveal>
+            <div class="feature__icon" aria-hidden="true">
+              <!-- SVG icon: bolt (energy) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            </div>
+            <h3 class="feature__title">Operación eficiente</h3>
+            <p>Sistema de 300W con respaldo <abbr title="Uninterruptible Power Supply">UPS</abbr> que sostiene 8 horas de autonomía ante cortes, crítico para cirugías de guardia.</p>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature" data-reveal>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h4l3-9 4 18 3-9h6"/></svg>
+            </div>
+            <h3 class="feature__title">Escaneo RFID de alta densidad</h3>
+            <p>Chipset Impinj R2000 identifica 800+ items por estante, EPC C1G2 / ISO 18000-6C, con alcance de 6 m y hasta 1.000 tags por minuto.</p>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature" data-reveal>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+            </div>
+            <h3 class="feature__title">Inventario optimizado con IA</h3>
+            <p>Machine learning pronostica la reposición usando 12 meses de consumo e integración con sistemas ERP, reduciendo el sobrestock hasta 35%.</p>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature" data-reveal>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3 class="feature__title">Doble autenticación</h3>
+            <p>Acceso por vena del dedo más tarjeta RFID con trazas de auditoría, cumpliendo FDA 21 CFR Part 11 para sustancias controladas.</p>
+          </article>
+
+          <!-- Feature 5 -->
+          <article class="feature" data-reveal>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+            </div>
+            <h3 class="feature__title">Integración con sistemas hospitalarios</h3>
+            <p>Interfaces HL7/FHIR sincronizan con Epic, Cerner y demás <abbr title="Electronic Medical Record">EMR</abbr>, preparando kits por caso con datos clínicos en tiempo real.</p>
+          </article>
+
+          <!-- Feature 6 -->
+          <article class="feature" data-reveal>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+            </div>
+            <h3 class="feature__title">Registro con blockchain</h3>
+            <p>Cámaras duales 1080p registran cada retiro con marcas de tiempo cifradas SHA-256 almacenadas en Hyperledger. Trazabilidad inmutable.</p>
+          </article>
+
+          <!-- Feature 7 -->
+          <article class="feature" data-reveal>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="feature__title">Construcción de grado médico</h3>
+            <p>Chasis de acero al carbonio de 1.2 mm soporta 200 kg de carga, con certificación IP54 para descontaminación y lavados de quirófano.</p>
+          </article>
+
+          <!-- Feature 8 -->
+          <article class="feature" data-reveal>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+            </div>
+            <h3 class="feature__title">Escaneo multiprotocolo</h3>
+            <p>RFID híbrido + código de barras (Code128/QR) para sistemas legacy. <abbr title="Software Development Kit">SDK</abbr> en Java y C# para integraciones a medida.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 8 — BANDA DESTACADA OSCURA (patrón amp Dark Feature Band)
+         Full-bleed fondo oscuro, headline centrada, accent rule.
+         Momento atmosférico — quiebre visual en la página.
+         ======================================================================= -->
+    <section class="band-dark" aria-labelledby="bandTitle">
+      <div class="band-dark__inner">
+        <h2 class="band-dark__title" id="bandTitle" data-reveal>
+          Diseñado para mover su institución hacia adelante.
+        </h2>
+        <span class="band-dark__rule" data-reveal aria-hidden="true"></span>
+        <p class="band-dark__sub" data-reveal>
+          Desde el primer escaneo, cada insumo queda registrado. Cada retiro,
+          trazado. Cada alerta, accionable. Eso es control.
+        </p>
+        <div class="band-dark__stats" data-reveal>
+          <div><strong data-count="99.9" data-suffix="%">0</strong><span>precisión de lectura</span></div>
+          <div><strong data-count="1000" data-suffix="+">0</strong><span>tags por minuto</span></div>
+          <div><strong data-count="35" data-suffix="%">0</strong><span>menos sobrestock</span></div>
+          <div><strong data-count="8" data-suffix="h">0</strong><span>autonomía ante cortes</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 9 — ESPECIFICACIONES (patrón Cykeo spec table, 5 grupos)
+         Tabla agrupada con todas las especificaciones técnicas.
+         ======================================================================= -->
+    <section class="specs" id="especificaciones" aria-labelledby="specsTitle">
+      <div class="specs__inner">
+        <header class="section-head" data-reveal>
+          <p class="section-head__eyebrow">Ficha técnica</p>
+          <h2 class="section-head__title" id="specsTitle">Especificaciones técnicas</h2>
+          <span class="section-head__rule" aria-hidden="true"></span>
+        </header>
+
+        <!-- Selector de modelo para filtrar specs -->
+        <div class="specs__tabs" role="tablist" aria-label="Modelo" data-reveal>
+          <button class="specs__tab is-active" role="tab" aria-selected="true" data-spec="gy1b">CK-GY1B</button>
+          <button class="specs__tab" role="tab" aria-selected="false" data-spec="gy1a">CK-GY1A</button>
+        </div>
+
+        <!-- Panel GY1B -->
+        <div class="specs__panel is-active" id="specsGy1b" role="tabpanel" data-reveal>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Especificaciones principales</h3>
+            <dl class="spec-group__list">
+              <div><dt>Marca</dt><dd>Cykeo</dd></div>
+              <div><dt>Modelo</dt><dd>CYKEO-GY1B</dd></div>
+              <div><dt>Producto</dt><dd>Medical RFID Cabinet</dd></div>
+            </dl>
+          </div>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Parámetros físicos</h3>
+            <dl class="spec-group__list">
+              <div><dt>Material</dt><dd>Chasis de metal + panel de vidrio</dd></div>
+              <div><dt>Dimensiones</dt><dd>835 × 1940 × 611 mm</dd></div>
+              <div><dt>Sistema operativo</dt><dd>Windows / Android</dd></div>
+              <div><dt>Controlador</dt><dd>Intel i5 4G+128G / RK3399 4G+16G</dd></div>
+              <div><dt>Pantalla táctil</dt><dd>21.5″ capacitiva</dd></div>
+              <div><dt>Combinación</dt><dd>Estantería / colgador</dd></div>
+              <div><dt>Peso</dt><dd>200 kg</dd></div>
+            </dl>
+          </div>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Soporte para desarrollo</h3>
+            <dl class="spec-group__list">
+              <div><dt>API</dt><dd>RESTful y nativas (IoT / ERP)</dd></div>
+              <div><dt>SDK</dt><dd>Toolkit completo para firmware y apps</dd></div>
+              <div><dt>Lenguajes</dt><dd>Java, C#</dd></div>
+            </dl>
+          </div>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Parámetros de performance</h3>
+            <dl class="spec-group__list">
+              <div><dt>Frecuencia</dt><dd>840–960 MHz</dd></div>
+              <div><dt>Protocolo</dt><dd>EPC C1G2, ISO 18000-6C</dd></div>
+              <div><dt>Velocidad de escaneo</dt><dd>≤ 5 s · 1.000 tags/min</dd></div>
+              <div><dt>Capacidad</dt><dd>400 unidades</dd></div>
+              <div><dt>Interfaces</dt><dd>Ethernet / RS232 / 4G</dd></div>
+              <div><dt>Autenticación</dt><dd>Rostro, tarjeta, huella (opcional)</dd></div>
+              <div><dt>Consumo</dt><dd>220V ≤ 125W (300W con UPS)</dd></div>
+            </dl>
+          </div>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Ambiente operativo</h3>
+            <dl class="spec-group__list">
+              <div><dt>Alimentación</dt><dd>AC 220V, ≤ 150W</dd></div>
+              <div><dt>Humedad</dt><dd>10%–90% HR (sin condensación)</dd></div>
+              <div><dt>Temperatura</dt><dd>0 °C a 60 °C</dd></div>
+              <div><dt>Protección</dt><dd>IP54 (polvo y agua)</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Panel GY1A -->
+        <div class="specs__panel" id="specsGy1a" role="tabpanel" data-reveal>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Especificaciones principales</h3>
+            <dl class="spec-group__list">
+              <div><dt>Marca</dt><dd>Cykeo</dd></div>
+              <div><dt>Modelo</dt><dd>CYKEO-GY1</dd></div>
+              <div><dt>Producto</dt><dd>Smart RFID Medical Cabinet</dd></div>
+            </dl>
+          </div>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Parámetros físicos</h3>
+            <dl class="spec-group__list">
+              <div><dt>Material</dt><dd>Chasis de metal + panel de vidrio</dd></div>
+              <div><dt>Dimensiones</dt><dd>835 × 1942 × 612 mm</dd></div>
+              <div><dt>Sistema operativo</dt><dd>Windows / Android</dd></div>
+              <div><dt>Controlador</dt><dd>Intel i5 4G+128G / RK3399 4G+16G</dd></div>
+              <div><dt>Pantalla táctil</dt><dd>14″ capacitiva + doble cámara 1080p</dd></div>
+              <div><dt>Peso</dt><dd>200 kg</dd></div>
+            </dl>
+          </div>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Soporte para desarrollo</h3>
+            <dl class="spec-group__list">
+              <div><dt>API</dt><dd>RESTful y nativas (IoT / ERP)</dd></div>
+              <div><dt>SDK</dt><dd>Toolkit completo para firmware y apps</dd></div>
+              <div><dt>Lenguajes</dt><dd>Java, C#</dd></div>
+            </dl>
+          </div>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Parámetros de performance</h3>
+            <dl class="spec-group__list">
+              <div><dt>Frecuencia</dt><dd>840–960 MHz</dd></div>
+              <div><dt>Protocolo</dt><dd>EPC C1G2, ISO 18000-6C</dd></div>
+              <div><dt>Velocidad de escaneo</dt><dd>≤ 5 s · buffer de 500 tags</dd></div>
+              <div><dt>Capacidad</dt><dd>200 unidades</dd></div>
+              <div><dt>Interfaces</dt><dd>Ethernet / RS232 / 4G</dd></div>
+              <div><dt>Cumplimiento</dt><dd>FDA 21 CFR Part 11, CE Médico</dd></div>
+              <div><dt>Autenticación</dt><dd>Rostro, tarjeta, huella (opcional)</dd></div>
+              <div><dt>Consumo</dt><dd>220V ≤ 125W</dd></div>
+            </dl>
+          </div>
+          <div class="spec-group">
+            <h3 class="spec-group__title">Ambiente operativo</h3>
+            <dl class="spec-group__list">
+              <div><dt>Alimentación</dt><dd>AC 220V, ≤ 150W</dd></div>
+              <div><dt>Humedad</dt><dd>10%–90% HR (sin condensación)</dd></div>
+              <div><dt>Temperatura</dt><dd>0 °C a 60 °C</dd></div>
+              <div><dt>Protección</dt><dd>IP54 (polvo y agua)</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <p class="specs__note" data-reveal>
+          * El rendimiento del producto se basa en pruebas en ambiente controlado.
+          Los resultados reales pueden variar según las condiciones de instalación.
+        </p>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 10 — CTA BAND "NEED A CUSTOM SOLUTION?" (patrón Cykeo)
+         Banda con título + subtexto + 2 CTAs.
+         ======================================================================= -->
+    <section class="cta-band" aria-labelledby="ctaBandTitle">
+      <div class="cta-band__inner">
+        <h2 class="cta-band__title" id="ctaBandTitle" data-reveal>¿Necesita una solución a medida?</h2>
+        <p class="cta-band__sub" data-reveal>
+          Cuéntenos los requisitos de su institución. Le enviamos una propuesta
+          adaptada en menos de 24 horas hábiles.
+        </p>
+        <div class="cta-band__actions" data-reveal>
+          <a href="#contacto" class="btn btn--primary">Hablar con un asesor</a>
+          <a href="mailto:ventas@idinteligentes.com.ar" class="btn btn--outlined">Escribir al equipo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 11 — FAQ (patrón accordion)
+         3 Q&A con casos reales, adaptados al contexto argentino.
+         ======================================================================= -->
+    <section class="faq" id="faq" aria-labelledby="faqTitle">
+      <div class="faq__inner">
+        <header class="section-head" data-reveal>
+          <p class="section-head__eyebrow">Preguntas frecuentes</p>
+          <h2 class="section-head__title" id="faqTitle">Resolvemos las dudas habituales</h2>
+          <span class="section-head__rule" aria-hidden="true"></span>
+        </header>
+
+        <div class="faq__list" data-reveal>
+          <!-- FAQ 1 -->
+          <details class="faq__item">
+            <summary>
+              <span>¿Cómo simplifica la pantalla táctil el flujo de inventario en quirófano?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__answer">
+              <p>La pantalla de 21.5″ funciona como centro de control. El escaneo completo del inventario se completa en segundos. Los insumos vencidos aparecen destacados en pantalla. Incluso es posible asignar items a cirujanos específicos mediante sus tarjetas RFID. Un hospital de referencia redujo el tiempo de preparación de quirófano en 40% usando este sistema, con todos los reportes de uso de implantes generados de forma automática y conforme a HIPAA, sin documentación adicional.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq__item">
+            <summary>
+              <span>¿Puede rastrear implantes metálicos a través de las puertas de vidrio?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__answer">
+              <p>Sí. Varios recursos lo hacen confiable: antenas sintonizadas para leer a través de vidrio de 12 mm, etiquetas RFID anti-metal específicas para implantes, y amplificación de señal que se activa cuando el gabinete detecta proximidad. Los hospitales que instalaron el sistema reportan más de 99% de precisión, incluso escaneando cientos de implantes de titanio sin necesidad de abrir las puertas.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq__item">
+            <summary>
+              <span>¿Cómo funciona el cumplimiento normativo para sustancias controladas?</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq__answer">
+              <p>Por capas. Los escaneos biométricos limitan el acceso al personal autorizado, todo queda registrado en memoria cifrada y la información del paciente se enmascara automáticamente en los reportes exportados. Una clínica que realizó una auditoría interna salió sin observaciones, con cero incumplimientos. El sistema está diseñado para soportar auditorías bajo FDA 21 CFR Part 11 y normas locales equivalentes.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 12 — INDUSTRIAS (patrón Cykeo cross-industry band)
+         7 industrias con estadística cuantificada.
+         ======================================================================= -->
+    <section class="industries" id="aplicaciones" aria-labelledby="industriesTitle">
+      <div class="industries__inner">
+        <header class="section-head" data-reveal>
+          <p class="section-head__eyebrow">Aplicaciones Cykeo RFID</p>
+          <h2 class="section-head__title" id="industriesTitle">Una plataforma, múltiples industrias</h2>
+          <span class="section-head__rule" aria-hidden="true"></span>
+          <p class="section-head__sub">La misma tecnología Cykeo que protege insumos médicos también opera en logística, manufactura y energía.</p>
+        </header>
+
+        <div class="industries__grid">
+          <article class="industry" data-reveal>
+            <h3>Almacenamiento</h3>
+            <p class="industry__stat"><strong data-count="99.6" data-suffix="%">0</strong> precisión de stock</p>
+            <p class="industry__desc">Escaneo masivo a 20 metros de distancia.</p>
+          </article>
+          <article class="industry" data-reveal>
+            <h3>Logística</h3>
+            <p class="industry__stat"><strong data-count="600">0</strong> unidades/hora</p>
+            <p class="industry__desc">Cross-docking de alta velocidad.</p>
+          </article>
+          <article class="industry" data-reveal>
+            <h3>Trazabilidad de herramientas</h3>
+            <p class="industry__stat"><strong data-count="53" data-suffix="%">0</strong> menos tiempo de búsqueda</p>
+            <p class="industry__desc">Recuperación inmediata del instrumental.</p>
+          </article>
+          <article class="industry" data-reveal>
+            <h3>Salud</h3>
+            <p class="industry__stat"><strong data-count="78" data-suffix="%">0</strong> menos errores de preparación</p>
+            <p class="industry__desc">Control de insumos críticos en tiempo real.</p>
+          </article>
+          <article class="industry" data-reveal>
+            <h3>Manufactura</h3>
+            <p class="industry__stat"><strong data-count="800" data-suffix="+">0</strong> unidades/min</p>
+            <p class="industry__desc">Líneas de producción a 99,97% de precisión.</p>
+          </article>
+          <article class="industry" data-reveal>
+            <h3>Energía</h3>
+            <p class="industry__stat"><strong data-count="24" data-suffix="/7">0</strong> monitoreo continuo</p>
+            <p class="industry__desc">Activos críticos siempre localizables.</p>
+          </article>
+          <article class="industry" data-reveal>
+            <h3>Seguridad</h3>
+            <p class="industry__stat"><strong data-count="67" data-suffix="%">0</strong> menos mermas</p>
+            <p class="industry__desc">Reducción de pérdidas de inventario.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECCIÓN 13 — FORMULARIO DE COMPRA / DEMO (patrón Cykeo procurement form)
+         6 campos + mensaje. Validación nativa, estados de envío.
+         ======================================================================= -->
+    <section class="contact" id="contacto" aria-labelledby="contactTitle">
+      <div class="contact__inner">
+        <div class="contact__copy" data-reveal>
+          <p class="section-head__eyebrow">Hablemos</p>
+          <h2 class="contact__title" id="contactTitle">Solicite una demo o presupuesto</h2>
+          <span class="section-head__rule" aria-hidden="true"></span>
+          <p class="contact__lead">
+            Complete el formulario y un asesor de IDInteligentes responde en el
+            día. Atendemos hospitales, clínicas y laboratorios en todo el país.
+          </p>
+          <ul class="contact__info">
+            <li><strong>Email:</strong> ventas@idinteligentes.com.ar</li>
+            <li><strong>Teléfono:</strong> +54 11 5555-5555</li>
+            <li><strong>Zona:</strong> CABA, Gran Buenos Aires e interior</li>
+            <li><strong>Respuesta:</strong> dentro de las 24 hs hábiles</li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="leadForm" novalidate data-reveal>
+          <div class="field">
+            <label for="f-name">Nombre y apellido <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-name" name="name" required autocomplete="name"
+                   aria-required="true" />
+            <p class="field__error" data-error-for="f-name"></p>
+          </div>
+          <div class="field">
+            <label for="f-email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="f-email" name="email" required autocomplete="email"
+                   aria-required="true" />
+            <p class="field__error" data-error-for="f-email"></p>
+          </div>
+          <div class="field">
+            <label for="f-tel">Teléfono <span aria-hidden="true">*</span></label>
+            <input type="tel" id="f-tel" name="tel" required autocomplete="tel"
+                   placeholder="Ej: +54 11 1234-5678" aria-required="true" />
+            <p class="field__error" data-error-for="f-tel"></p>
+          </div>
+          <div class="field">
+            <label for="f-org">Institución / Empresa <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-org" name="org" required autocomplete="organization"
+                   aria-required="true" />
+            <p class="field__error" data-error-for="f-org"></p>
+          </div>
+          <div class="field">
+            <label for="f-qty">Cantidad estimada <span aria-hidden="true">*</span></label>
+            <input type="number" id="f-qty" name="qty" required min="1" placeholder="Ej: 2"
+                   aria-required="true" />
+            <p class="field__error" data-error-for="f-qty"></p>
+          </div>
+          <div class="field field--full">
+            <label for="f-msg">Consulta <span aria-hidden="true">*</span></label>
+            <textarea id="f-msg" name="msg" required rows="4"
+                      placeholder="Cuéntenos sobre su necesidad: modelo de interés, entorno, plazos…"
+                      aria-required="true"></textarea>
+            <p class="field__error" data-error-for="f-msg"></p>
+          </div>
+
+          <!-- Modelo pre-seleccionado por el botón clickeado -->
+          <div class="field field--full">
+            <label for="f-model">Modelo de interés</label>
+            <select id="f-model" name="model">
+              <option value="">Sin preferencia</option>
+              <option value="GY1B">CK-GY1B · Medical RFID Cabinet (21.5″, 400u)</option>
+              <option value="GY1A">CK-GY1A · Smart RFID Medical Cabinet (14″, 200u)</option>
+              <option value="ambos">Ambos modelos</option>
+            </select>
+          </div>
+
+          <div class="field field--full contact__submit">
+            <button type="submit" class="btn btn--primary btn--lg">Enviar consulta</button>
+            <p class="contact__success" id="formSuccess" role="status" hidden>
+              ✓ Gracias. Un asesor responde a la brevedad.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       SECCIÓN 14 — FOOTER (patrón Apple Footer)
+       Multi-columna, tipográfico, flat, sin cards.
+       ========================================================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">
+          <img src="assets/logo-mark.svg" alt="" class="footer__logo-img" width="24" height="24" />
+          IDInteligentes
+        </p>
+        <p class="footer__tag">Distribuidor oficial Cykeo RFID en Argentina.</p>
+        <p class="footer__contact">
+          ventas@idinteligentes.com.ar<br />
+          +54 11 5555-5555<br />
+          Buenos Aires, Argentina
+        </p>
+      </div>
+
+      <nav class="footer__col" aria-label="IDInteligentes">
+        <h3>IDInteligentes</h3>
+        <ul>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#caracteristicas">Características</a></li>
+          <li><a href="#aplicaciones">Aplicaciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Recursos">
+        <h3>Recursos</h3>
+        <ul>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#especificaciones">Ficha técnica</a></li>
+          <li><a href="#">Documentación</a></li>
+          <li><a href="#">Soporte técnico</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Cykeo">
+        <h3>Cykeo</h3>
+        <ul>
+          <li><a href="#">Sobre Cykeo</a></li>
+          <li><a href="#">RFID Industrial</a></li>
+          <li><a href="#">Soluciones</a></li>
+          <li><a href="#">Industrias</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__legal">
+      <p>© 2026 IDInteligentes. Cykeo® es marca de Cykeo Information Technology Co., Ltd. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       ELEMENTOS FLOTANTES — botón volver arriba (patrón Cykeo TOP button)
+       ========================================================================= -->
+  <button class="to-top" id="toTop" aria-label="Volver arriba" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>

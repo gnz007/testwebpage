@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" role="img" aria-label="IDInteligentes">
+  <!--
+    IDInteligentes — Logo horizontal completo
+    Marca distribuidora oficial Cykeo RFID en Argentina
+    Sistema: Apple-inspired (un azul #0071e3, geometría simple)
+  -->
+  <!-- ===== MARK: cuadrado redondeado + monograma ID + ondas RFID ===== -->
+  <g>
+    <!-- Cuadrado redondeado base -->
+    <rect x="0" y="0" width="100" height="100" rx="24" fill="#0071e3"/>
+    <!-- Monograma ID -->
+    <text x="50" y="58" font-family="'Inter', system-ui, -apple-system, sans-serif"
+          font-size="44" font-weight="700" fill="#ffffff"
+          text-anchor="middle" dominant-baseline="middle"
+          letter-spacing="-2">ID</text>
+    <!-- Ondas RFID sutiles (esquina superior derecha) -->
+    <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.55">
+      <path d="M72 24 q8 8 0 16"/>
+      <path d="M80 20 q14 14 0 28"/>
+    </g>
+  </g>
+  <!-- ===== WORDMARK ===== -->
+  <text x="124" y="58" font-family="'Inter', system-ui, -apple-system, sans-serif"
+        font-size="34" font-weight="600" fill="#1d1d1f"
+        dominant-baseline="middle" letter-spacing="-1">IDInteligentes</text>
+  <!-- Subtítulo opcional: tagline bajo la marca -->
+  <text x="124" y="80" font-family="'Inter', system-ui, -apple-system, sans-serif"
+        font-size="12" font-weight="400" fill="#707070"
+        letter-spacing="0.5">Cykeo RFID · Argentina</text>
+</svg>

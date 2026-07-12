@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" role="img" aria-label="IDInteligentes">
+  <!--
+    IDInteligentes — Logo versión blanca (para fondos oscuros)
+    Mismo lockup horizontal, wordmark y subtítulo en blanco.
+  -->
+  <g>
+    <rect x="0" y="0" width="100" height="100" rx="24" fill="#ffffff" opacity="0.12"/>
+    <rect x="0" y="0" width="100" height="100" rx="24" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <text x="50" y="58" font-family="'Inter', system-ui, -apple-system, sans-serif"
+          font-size="44" font-weight="700" fill="#ffffff"
+          text-anchor="middle" dominant-baseline="middle"
+          letter-spacing="-2">ID</text>
+    <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7">
+      <path d="M72 24 q8 8 0 16"/>
+      <path d="M80 20 q14 14 0 28"/>
+    </g>
+  </g>
+  <text x="124" y="58" font-family="'Inter', system-ui, -apple-system, sans-serif"
+        font-size="34" font-weight="600" fill="#ffffff"
+        dominant-baseline="middle" letter-spacing="-1">IDInteligentes</text>
+  <text x="124" y="80" font-family="'Inter', system-ui, -apple-system, sans-serif"
+        font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)"
+        letter-spacing="0.5">Cykeo RFID · Argentina</text>
+</svg>
