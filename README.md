@@ -1,87 +1,53 @@
-# IDInteligentes — Landing Page
+# Identificaciones Inteligentes — Landing Page
 
-Landing page oficial de **IDInteligentes**, distribuidor de los gabinetes RFID médicos **Cykeo** en Argentina.
+Landing page profesional lista para publicar en GitHub Pages.
 
-![IDInteligentes](assets/logo.svg)
+## Características
 
-## 🚀 Ver online (GitHub Pages)
+- Diseño Apple-inspired minimalista con iconos SVG
+- Modo claro/oscuro con toggle persistente
+- 100% responsive (mobile-first)
+- HTML accesible (semántico, ARIA, alt en imágenes)
+- SEO optimizado (meta tags, Open Graph)
+- Sin dependencias (HTML + CSS + JS puro)
+- Imágenes incluidas en `assets/`
 
-Después de hacer push, activá GitHub Pages:
+## Estructura
 
-1. Andá al repositorio en GitHub → **Settings** → **Pages**
-2. **Source:** `Deploy from a branch`
-3. **Branch:** `main` · **Folder:** `/root` (o `/landing` si subís solo la carpeta)
-4. **Save** → en 1–2 min tu URL será:
-
-   ```
-   https://TU-USUARIO.github.io/TU-REPO/
-   ```
-
-## 📦 Qué incluye
-
-| Archivo | Descripción |
-|---------|-------------|
-| `index.html` | Página completa, 15 secciones, semántica HTML5 |
-| `styles.css` | Sistema de diseño Apple + acentos amp, responsive |
-| `script.js` | 8 módulos JS vanilla (reveal, galería, tabs, contadores, form) |
-| `assets/logo.svg` | Logo horizontal completo (claro) |
-| `assets/logo-white.svg` | Logo versión blanca (para fondos oscuros) |
-| `assets/logo-mark.svg` | Solo isotipo (avatar / app icon) |
-| `assets/favicon.svg` | Favicon |
-| `assets/products/gy1b/` | 6 imágenes producto CK-GY1B |
-| `assets/products/gy1a/` | 6 imágenes producto CK-GY1A |
-
-## 🖥️ Ver localmente
-
-Opción A — doble click:
 ```
-Abrí index.html en el navegador
+├── index.html      # Página principal
+├── styles.css      # Estilos responsive con dark mode
+├── script.js       # Interactividad (dark mode, menú, formulario)
+├── assets/
+│   ├── hero.jpg
+│   ├── product-tablet.jpg
+│   ├── product-captura.jpg
+│   └── product-impresora.jpg
+├── .gitignore
+├── README.md
+└── LICENSE
 ```
 
-Opción B — servidor local (recomendado para que las fuentes carguen bien):
+## Uso local
+
+Descomprime el ZIP y abre `index.html` en tu navegador.
+
+O con un servidor local:
 ```bash
-# Python
 python -m http.server 8000
-# después: http://localhost:8000
-
-# Node
-npx serve
 ```
+Abre `http://localhost:8000`
 
-## 🎨 Sistema de diseño
+## Publicar en GitHub Pages
 
-Basado en Apple (referencia principal) + amp (acentos secundarios):
+1. Crea un repositorio en GitHub
+2. Sube todos los archivos (incluida la carpeta `assets/`)
+3. Ve a Settings → Pages
+4. Source: Deploy from a branch
+5. Branch: main → / (root)
+6. Save
+7. Tu sitio estará en `https://TU-USUARIO.github.io/NOMBRE-REPO/`
 
-- **Canvas:** `#f5f5f7` (frost)
-- **Texto:** `#1d1d1f` (carbon)
-- **CTA:** `#0071e3` (apple-blue, único color cromático de acción)
-- **Botones:** pill 980px (filled + outlined, nunca 2 filled juntos)
-- **Cards:** radio 8px, sin sombra — solo hairline borders
-- **Sombra:** exclusiva en imágenes de producto
+## Licencia
 
-## ✨ Características
-
-- ✅ Responsive (mobile-first, breakpoints 480/768/1024px)
-- ✅ Accesibilidad WCAG 2.1 (focus visible, ARIA, nav por teclado)
-- ✅ `prefers-reduced-motion` y `prefers-contrast: more`
-- ✅ Animaciones reveal on scroll (IntersectionObserver)
-- ✅ Galería de producto con thumbnails
-- ✅ Tabs de especificaciones GY1B / GY1A
-- ✅ Contadores animados
-- ✅ FAQ accordion
-- ✅ Formulario con validación
-
-## 🇦🇷 Datos de la marca (editar)
-
-Estos valores están en `index.html` — cambialos por los reales:
-
-```html
-ventas@idinteligentes.com.ar     <!-- footer + CTA mailto -->
-+54 11 5555-5555                  <!-- footer -->
-Buenos Aires, Argentina           <!-- footer -->
-```
-
-## 📝 Licencia
-
-© 2026 IDInteligentes. Cykeo® es marca de Cykeo Information Technology Co., Ltd.
-Todos los derechos reservados.
+MIT License. Contenido © 2012 Identificacines Inteligentes S.R.L.
